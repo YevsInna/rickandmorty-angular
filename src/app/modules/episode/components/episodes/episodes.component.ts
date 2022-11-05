@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {IEpisode} from "../../interfaces";
+import {IEpisode, IResults} from "../../interfaces";
 import {EpisodeService} from "../../services";
 
 @Component({
@@ -9,13 +9,13 @@ import {EpisodeService} from "../../services";
   styleUrls: ['./episodes.component.css']
 })
 export class EpisodesComponent implements OnInit {
-  episodes: IEpisode[];
+  results: IResults[];
 
   constructor(private episodeService: EpisodeService) {
   }
 
   ngOnInit(): void {
-    this.episodeService.getAll().subscribe(value => this.episodes = value)
+    this.episodeService.getAll().subscribe(value => this.results = value)
   }
 
 }

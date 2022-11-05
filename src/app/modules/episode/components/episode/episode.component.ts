@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
-import {IEpisode} from "../../interfaces";
+import {IEpisode, IResults} from "../../interfaces";
 
 @Component({
   selector: 'app-episode',
@@ -10,7 +10,7 @@ import {IEpisode} from "../../interfaces";
 })
 export class EpisodeComponent implements OnInit {
   @Input()
-  episode: IEpisode
+  result: IResults
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
